@@ -1,5 +1,6 @@
 package com.example.finalprojectlab
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -42,8 +43,12 @@ class MainActivity : AppCompatActivity() {
                     textPassword.requestFocus()
                 }
 
-                else ->
+                else -> {
                     Toast.makeText(applicationContext, "Success", Toast.LENGTH_LONG).show()
+                    val intent = Intent(this, MainClass::class.java)
+                    startActivity(intent)
+                }
+
             }
 
 

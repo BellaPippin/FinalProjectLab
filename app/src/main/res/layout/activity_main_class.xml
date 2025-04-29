@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainClass">
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="281dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtLastName"
+        android:layout_width="279dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Last Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+    <EditText
+        android:id="@+id/txtPhone"
+        android:layout_width="283dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:text="Phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLastName" />
+
+    <TextView
+        android:id="@+id/dateOfBirth"
+        android:layout_width="170dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:text="Date of Birth"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPhone" />
+
+    <TextView
+        android:id="@+id/txtMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="24dp"
+        android:text="Month"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateOfBirth" />
+
+    <Spinner
+        android:id="@+id/spMonth"
+        android:layout_width="106dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:entries="@array/months"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMonth" />
+
+    <TextView
+        android:id="@+id/txtDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Day"
+        app:layout_constraintEnd_toStartOf="@+id/txtYear"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toEndOf="@+id/txtMonth"
+        app:layout_constraintTop_toBottomOf="@+id/dateOfBirth" />
+
+    <EditText
+        android:id="@+id/txtEditDay"
+        android:layout_width="88dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="DD"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@+id/txtEditYear"
+        app:layout_constraintStart_toEndOf="@+id/spMonth"
+        app:layout_constraintTop_toBottomOf="@+id/txtDay" />
+
+    <TextView
+        android:id="@+id/txtYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="72dp"
+        android:text="Year"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateOfBirth" />
+
+    <EditText
+        android:id="@+id/txtEditYear"
+        android:layout_width="105dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="28dp"
+        android:ems="10"
+        android:hint="YYYY"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtYear" />
+
+    <TextView
+        android:id="@+id/txtDegree"
+        android:layout_width="111dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="32dp"
+        android:text="Certificate"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spMonth" />
+
+    <TextView
+        android:id="@+id/txtAssociate"
+        android:layout_width="111dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="72dp"
+        android:text="Associates"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditYear" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="291dp"
+        android:layout_height="61dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:checked="true"
+        android:foregroundGravity="fill_horizontal|center_vertical|center|center_horizontal"
+        android:gravity="center|center_horizontal|fill_horizontal|center_vertical"
+        android:includeFontPadding="false"
+        android:showText="true"
+        android:singleLine="false"
+        android:splitTrack="true"
+        android:textAlignment="center"
+        android:textOff="Certificate"
+        android:textOn="Associates"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="center"
+        app:layout_constrainedHeight="false"
+        app:layout_constrainedWidth="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDegree" />
+
+    <Spinner
+        android:id="@+id/spCerts"
+        android:layout_width="156dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        android:entries="@array/certs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch1" />
+
+    <Spinner
+        android:id="@+id/spAssociates"
+        android:layout_width="166dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="28dp"
+        android:entries="@array/associates"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch1" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:text="Next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.777"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,7 @@ package com.example.finalprojectlab
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +13,7 @@ import android.widget.CheckedTextView
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Toast
+import android.widget.TextView
 
 
 class ChooseClass : AppCompatActivity() {
@@ -46,6 +48,7 @@ class ChooseClass : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_choose_class)
+
 
         ctv1 = findViewById<CheckedTextView>(R.id.ctv1)
         ctv2 = findViewById<CheckedTextView>(R.id.ctv2)
@@ -123,6 +126,9 @@ class ChooseClass : AppCompatActivity() {
                 radioButton = findViewById<RadioButton>(selectedTime4)
                 radio4Text = radioButton.text.toString()
             }
+
+            Log.d("Debug", "FirstName: $firstName, LastName: $lastName, Phone: $phone, Birth: $birthDate, Degree, $isDegreeCert, Major, $degreeCertification")
+
 
             if (radioCheck(selectedTime1, selectedTime2, selectedTime3, selectedTime4)){
                 val nextScreen2 = Intent(this@ChooseClass, Summary::class.java).apply {

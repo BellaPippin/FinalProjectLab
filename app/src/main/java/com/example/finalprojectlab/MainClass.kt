@@ -50,10 +50,10 @@ class MainClass : AppCompatActivity() {
                 doBirth = spMonth.selectedItem.toString() + "/" + txtEditDay.text.toString() + "/" + txtEditYear.text.toString()
 
                 val nextScreen = Intent(this@MainClass, ChooseClass::class.java)
-                nextScreen.putExtra("firstName", txtName.text.toString())
-                nextScreen.putExtra("lastName", txtLastName.text.toString())
-                nextScreen.putExtra("phone", txtPhone.text.toString())
-                nextScreen.putExtra("birthdate", doBirth)
+                nextScreen.putExtra("FirstName", txtName.text.toString())
+                nextScreen.putExtra("LastName", txtLastName.text.toString())
+                nextScreen.putExtra("Phone", txtPhone.text.toString())
+                nextScreen.putExtra("BirthDate", doBirth)
 
                 if (spCertificate.visibility == View.VISIBLE){
                     nextScreen.putExtra("isDegreeCert", "Certificate")

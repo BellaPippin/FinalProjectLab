@@ -28,5 +28,7 @@
     <string name="sumMajor">Major:</string>
     <string name="sumNext">Next Semester:</string>
 
+    <string name="regSummary">Registration Summary</string>
+
 
 </resources>
